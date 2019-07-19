@@ -14,7 +14,6 @@ namespace Trestlebridge.Actions {
 
             Console.Write ("> ");
             string input = Console.ReadLine ();
-
             switch (Int32.Parse(input))
             {
                 case 1:
