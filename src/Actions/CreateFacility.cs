@@ -28,6 +28,12 @@ namespace Trestlebridge.Actions
                     break;
                 default:
                     break;
+
+
+
+                case 3:
+                    farm.AddNaturalField(new NaturalField());
+                    break;
             }
 
         }
