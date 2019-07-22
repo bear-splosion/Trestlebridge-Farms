@@ -30,6 +30,15 @@ namespace Trestlebridge.Actions
                     break;
             }
 
+            switch (Int32.Parse(input))
+            {
+                case 2:
+                    farm.AddPlowedField(new PlowedField());
+                    break;
+                default:
+                    break;
+            }
+
         }
     }
 }
