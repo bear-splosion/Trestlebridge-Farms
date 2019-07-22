@@ -32,6 +32,15 @@ namespace Trestlebridge.Actions
                 default:
                     break;
             }
+            switch (Int32.Parse(input))
+            {
+                case 5:
+                    farm.AddDuckHouse(new DuckHouse());
+                    break;
+                default:
+                    break;
+            }
+
 
             switch (Int32.Parse(input))
             {
