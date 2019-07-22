@@ -11,6 +11,8 @@ namespace Trestlebridge.Models
         public List<GrazingField> GrazingFields { get; } = new List<GrazingField>();
         public List<NaturalField> NaturalFields { get; } = new List<NaturalField>();
 
+        //Adds Duck House field when creating new facility.
+        public List<DuckHouse> DuckHouses { get; } = new List<DuckHouse>();
         public List<ChickenHouse> ChickenHouses { get; } = new List<ChickenHouse>();
 
         /*
@@ -43,6 +45,14 @@ namespace Trestlebridge.Models
             Console.WriteLine("Press enter to return to Main Menu");
             Console.ReadLine();
         }
+        //Adds Duck House field when creating new facility.
+        public void AddDuckHouse(DuckHouse house)
+        {
+            DuckHouses.Add(house);
+            Console.WriteLine("Duck House Added");
+            Console.WriteLine("Press enter to return to Main Menu");
+            Console.ReadLine();
+        }
 
         public void AddChickenHouse(ChickenHouse coop)
         {
@@ -68,6 +78,7 @@ namespace Trestlebridge.Models
         {
             StringBuilder report = new StringBuilder();
             GrazingFields.ForEach(gf => report.Append(gf));
+            DuckHouses.ForEach(dh => report.Append(dh));
 
 
             NaturalFields.ForEach(nf => report.Append(nf));
@@ -76,5 +87,27 @@ namespace Trestlebridge.Models
 
             return report.ToString();
         }
+        /*
+            This method must specify the correct product interface of the
+            resource being purchased.
+         */
+
+        // add duck
+        public void PurchaseResource<T>(IQuackHouse resource, int index)
+        {
+            Console.WriteLine(typeof(T).ToString());
+            switch (typeof(T).ToString())
+            {
+                case "Duck":
+                    DuckHouses[index].AddResource((IQuackHouse)resource);
+                    break;
+                default:
+                    break;
+            }
+        }
+
+
+
+
     }
 }

@@ -38,6 +38,15 @@ namespace Trestlebridge.Actions
                     farm.AddNaturalField(new NaturalField());
                     break;
             }
+            switch (Int32.Parse(input))
+            {
+                case 5:
+                    farm.AddDuckHouse(new DuckHouse());
+                    break;
+                default:
+                    break;
+            }
+
 
         }
     }
