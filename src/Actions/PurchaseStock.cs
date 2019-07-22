@@ -8,6 +8,7 @@ namespace Trestlebridge.Actions
 {
     public class PurchaseStock
     {
+
         public static void CollectInput(Farm farm)
         {
             Console.WriteLine("1. Cow");
@@ -15,6 +16,7 @@ namespace Trestlebridge.Actions
             Console.WriteLine("3. Goat");
             Console.WriteLine("4. Pig");
             Console.WriteLine("5. Sheep");
+            Console.WriteLine("6. Chicken");
             Console.WriteLine("7. Duck");
 
             Console.WriteLine();
@@ -47,6 +49,10 @@ namespace Trestlebridge.Actions
                     break;
                 case 7:
                     ChooseDuckHouse.CollectInput(farm, new Duck());
+                    break;
+
+                case 6:
+                    ChooseChickenHouse.CollectInput(farm, new Chicken());
                     break;
 
                 default:
