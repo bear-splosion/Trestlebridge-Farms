@@ -27,6 +27,7 @@ namespace Trestlebridge.Models
             }
         }
 
+        //Adds Grazing field when purchasing new facility.
         public void AddGrazingField(GrazingField field)
         {
             GrazingFields.Add(field);

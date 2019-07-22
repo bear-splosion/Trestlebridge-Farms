@@ -7,10 +7,11 @@ using Trestlebridge.Interfaces;
 namespace Trestlebridge.Models.Facilities {
     public class GrazingField : IFacility<IGrazing>
     {
-        private int _capacity = 50;
+        //changed capacity to 20
+        private int _capacity = 20;
         private Guid _id = Guid.NewGuid();
 
-        private List<IGrazing> _animals = new List<IGrazing>();
+        public List<IGrazing> animals = new List<IGrazing>();
 
         public double Capacity {
             get {
@@ -19,9 +20,8 @@ namespace Trestlebridge.Models.Facilities {
         }
 
         public void AddResource (IGrazing animal)
-        {
-            // TODO: implement this...
-            throw new NotImplementedException();
+        {   
+            animals.Add(animal);
         }
 
         public void AddResource (List<IGrazing> animals) 
@@ -35,8 +35,8 @@ namespace Trestlebridge.Models.Facilities {
             StringBuilder output = new StringBuilder();
             string shortId = $"{this._id.ToString().Substring(this._id.ToString().Length - 6)}";
 
-            output.Append($"Grazing field {shortId} has {this._animals.Count} animals\n");
-            this._animals.ForEach(a => output.Append($"   {a}\n"));
+            output.Append($"Grazing field {shortId} has {this.animals.Count} animals out of 20 spaces.\n");
+            this.animals.ForEach(a => output.Append($"   {a}\n"));
 
             return output.ToString();
         }
