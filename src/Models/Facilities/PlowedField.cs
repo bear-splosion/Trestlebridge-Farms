@@ -14,13 +14,16 @@ namespace Trestlebridge.Models.Facilities
 
         public List<IPlowing> plants = new List<IPlowing>();
 
-        public double Capacity => throw new NotImplementedException();
+        public double PlowedCapacity
+        {
 
-        // public double Capacity {
-        //     get {
-        //         return _capacity;
-        //     }
-        // }
+            get
+            {
+                return _plantCapacity;
+            }
+        }
+
+        public double Capacity => throw new NotImplementedException();
 
         public void AddResource(IPlowing plant)
         {

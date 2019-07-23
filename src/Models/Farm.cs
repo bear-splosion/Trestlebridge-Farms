@@ -60,6 +60,8 @@ namespace Trestlebridge.Models
         {
             PlowedFields.Add(plowedField);
             Console.WriteLine("Plowed Field Added");
+            Console.WriteLine("Press enter to return to Main Menu");
+            Console.ReadLine();
         }
 
         public void AddChickenHouse(ChickenHouse coop)
