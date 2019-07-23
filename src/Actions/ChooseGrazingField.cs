@@ -17,7 +17,7 @@ namespace Trestlebridge.Actions
             for (int i = 0; i < farm.GrazingFields.Count; i++)
             {
                 //Grazing field is an array.  + 1 will stop the list from starting at zero.
-                Console.WriteLine($"{i + 1}. Grazing Field : Contains {farm.GrazingFields[i].animals.Count} animals");
+                Console.WriteLine($"{i + 1}. Grazing Field : Contains {farm.GrazingFields[i].animals.Count} Animals");
             }
 
             // How can I output the type of animal chosen here?
