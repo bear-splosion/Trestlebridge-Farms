@@ -11,6 +11,7 @@ namespace Trestlebridge.Models
         public List<GrazingField> GrazingFields { get; } = new List<GrazingField>();
         public List<NaturalField> NaturalFields { get; } = new List<NaturalField>();
 
+        public List<PlowedField> PlowedFields { get; } = new List<PlowedField>();
         //Adds Duck House field when creating new facility.
         public List<DuckHouse> DuckHouses { get; } = new List<DuckHouse>();
         public List<ChickenHouse> ChickenHouses { get; } = new List<ChickenHouse>();
@@ -54,6 +55,15 @@ namespace Trestlebridge.Models
             Console.ReadLine();
         }
 
+        // Adds Plowed field when purchasing new facility
+        public void AddPlowedField(PlowedField plowedField)
+        {
+            PlowedFields.Add(plowedField);
+            Console.WriteLine("Plowed Field Added");
+            Console.WriteLine("Press enter to return to Main Menu");
+            Console.ReadLine();
+        }
+
         public void AddChickenHouse(ChickenHouse coop)
         {
             ChickenHouses.Add(coop);
@@ -80,6 +90,7 @@ namespace Trestlebridge.Models
             GrazingFields.ForEach(gf => report.Append(gf));
             DuckHouses.ForEach(dh => report.Append(dh));
 
+            PlowedFields.ForEach(pf => report.Append(pf));
 
             NaturalFields.ForEach(nf => report.Append(nf));
 
