@@ -12,7 +12,7 @@ namespace Trestlebridge.Models.Facilities
         private int _capacity = 12;
         private Guid _id = Guid.NewGuid();
 
-        public List<IQuackHouse> animals = new List<IQuackHouse>();
+        public List<IQuackHouse> ducks = new List<IQuackHouse>();
 
         public double Capacity
         {
@@ -22,12 +22,12 @@ namespace Trestlebridge.Models.Facilities
             }
         }
 
-        public void AddResource(IQuackHouse animal)
+        public void AddResource(IQuackHouse duck)
         {
-            animals.Add(animal);
+            ducks.Add(duck);
         }
 
-        public void AddResource(List<IQuackHouse> animals)
+        public void AddResource(List<IQuackHouse> ducks)
         {
             // TODO: implement this...
             throw new NotImplementedException();
@@ -38,8 +38,8 @@ namespace Trestlebridge.Models.Facilities
             StringBuilder output = new StringBuilder();
             string shortId = $"{this._id.ToString().Substring(this._id.ToString().Length - 6)}";
 
-            output.Append($"Duck House {shortId} has {this.animals.Count} animals out of 12 spaces.\n");
-            this.animals.ForEach(a => output.Append($"   {a}\n"));
+            output.Append($"Duck House {shortId} has {this.ducks.Count} ducks out of 12 spaces.\n");
+            this.ducks.ForEach(a => output.Append($"   {a}\n"));
 
             return output.ToString();
         }

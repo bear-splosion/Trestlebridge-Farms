@@ -8,7 +8,7 @@ namespace Trestlebridge.Actions
 {
     public class ChooseDuckHouse
     {
-        public static void CollectInput(Farm farm, IQuackHouse animal)
+        public static void CollectInput(Farm farm, IQuackHouse duck)
         {
             Console.Clear();
 
@@ -17,7 +17,9 @@ namespace Trestlebridge.Actions
             for (int i = 0; i < farm.DuckHouses.Count; i++)
             {
                 //Grazing field is an array.  + 1 will stop the list from starting at zero.
-                Console.WriteLine($"{i + 1}. Duck House : Contains {farm.DuckHouses[i].animals.Count} Ducks");
+                if (farm.DuckHouses[i].Capacity > farm.DuckHouses[i].ducks.Count) {
+                 Console.WriteLine($"{i + 1}. Grazing Field : Contains {farm.DuckHouses[i].ducks.Count} Ducks");
+                }
             }
 
             // How can I output the type of animal chosen here?
@@ -28,7 +30,7 @@ namespace Trestlebridge.Actions
 
             //-1 will set the choice back to the GrazinFields actual array index not the displayed "list" value.4
 
-            farm.DuckHouses[choice - 1].AddResource(animal);
+            farm.DuckHouses[choice - 1].AddResource(duck);
 
 
             /*
