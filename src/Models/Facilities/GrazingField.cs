@@ -39,6 +39,6 @@ namespace Trestlebridge.Models.Facilities {
             this.animals.ForEach(a => output.Append($"   {a}\n"));
 
             return output.ToString();
-        }
+        } 
     }
 }
