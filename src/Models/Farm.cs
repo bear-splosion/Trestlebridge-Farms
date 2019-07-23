@@ -88,6 +88,7 @@ namespace Trestlebridge.Models
         {
             StringBuilder report = new StringBuilder();
             GrazingFields.ForEach(gf => report.Append(gf));
+            
             DuckHouses.ForEach(dh => report.Append(dh));
 
             PlowedFields.ForEach(pf => report.Append(pf));
@@ -98,27 +99,7 @@ namespace Trestlebridge.Models
 
             return report.ToString();
         }
-        /*
-            This method must specify the correct product interface of the
-            resource being purchased.
-         */
-
-        // add duck
-        public void PurchaseResource<T>(IQuackHouse resource, int index)
-        {
-            Console.WriteLine(typeof(T).ToString());
-            switch (typeof(T).ToString())
-            {
-                case "Duck":
-                    DuckHouses[index].AddResource((IQuackHouse)resource);
-                    break;
-                default:
-                    break;
-            }
-        }
-
-
-
+    
 
     }
 }

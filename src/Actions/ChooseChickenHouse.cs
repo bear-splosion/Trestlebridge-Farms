@@ -14,10 +14,12 @@ namespace Trestlebridge.Actions
 
             for(int i = 0; i < farm.ChickenHouses.Count; i++)
             {
-                Console.WriteLine($"{i + 1}. Chicken House : Contains {farm.ChickenHouses[i].chickens.Count} chickens.  Look at all these chickens.");
+                if (farm.ChickenHouses[i].Capacity > farm.ChickenHouses[i].chickens.Count) {
+                 Console.WriteLine($"{i + 1}. Chicken House : Contains {farm.ChickenHouses[i].chickens.Count} Chickens");
+                }
             }
 
-            Console.WriteLine($"Where do you wanna put this chciken?");
+            Console.WriteLine($"Where do you wanna put this chicken?");
 
             Console.Write("> ");
             int choice =  Int32.Parse(Console.ReadLine());
