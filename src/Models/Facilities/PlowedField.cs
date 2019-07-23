@@ -8,8 +8,8 @@ namespace Trestlebridge.Models.Facilities
 {
     public class PlowedField : IFacility<IPlowing>
     {
-        private int _rowCapacity = 13;
-        private int _plantCapacity = 5;
+        private int plantsPerRow = 5;
+        private int rowsOfPlants = 13;
         private Guid _id = Guid.NewGuid();
 
         public List<IPlowing> plants = new List<IPlowing>();
@@ -19,7 +19,7 @@ namespace Trestlebridge.Models.Facilities
 
             get
             {
-                return _plantCapacity;
+                return plantsPerRow * rowsOfPlants;
             }
         }
 
