@@ -41,7 +41,7 @@ namespace Trestlebridge.Models.Facilities
             StringBuilder output = new StringBuilder();
             string shortId = $"{this._id.ToString().Substring(this._id.ToString().Length - 6)}";
 
-            output.Append($"Plowed field {shortId} has {this.plants.Count} plants out of so many row.\n");
+            output.Append($"Plowed field {shortId} has {this.plants.Count} plants out of 65 plants.\n");
             this.plants.ForEach(a => output.Append($"   {a}\n"));
 
             return output.ToString();

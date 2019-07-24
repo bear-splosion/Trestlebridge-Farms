@@ -17,8 +17,9 @@ namespace Trestlebridge.Actions
             for (int i = 0; i < farm.DuckHouses.Count; i++)
             {
                 //Grazing field is an array.  + 1 will stop the list from starting at zero.
-                if (farm.DuckHouses[i].Capacity > farm.DuckHouses[i].ducks.Count) {
-                 Console.WriteLine($"{i + 1}. Grazing Field : Contains {farm.DuckHouses[i].ducks.Count} Ducks");
+                if (farm.DuckHouses[i].Capacity > farm.DuckHouses[i].ducks.Count)
+                {
+                    Console.WriteLine($"{i + 1}. Duck House : Contains {farm.DuckHouses[i].ducks.Count} Ducks");
                 }
             }
 
