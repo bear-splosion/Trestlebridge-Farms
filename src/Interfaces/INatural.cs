@@ -2,8 +2,8 @@ namespace Trestlebridge.Interfaces
 {
     public interface INatural
     {
-        double NaturalRows { get; set; }
-        double NaturalPlants { get; set; }
+        int plantsPerRow { get; set; }
+        int rowsOfPlants { get; set; }
         // void Graze();
     }
 }
