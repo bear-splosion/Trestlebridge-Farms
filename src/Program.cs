@@ -12,18 +12,29 @@ namespace Trestlebridge
             Console.Clear();
             Console.WriteLine();
             Console.WriteLine(@"
-        +-++-++-++-++-++-++-++-++-++-++-++-++-+
+      {{{}}    ,,,             {{{}}    ,,,
+   ,,, ~Y~    {{{}},,,      ,,, ~Y~    {{{}},,,
+  {{}}} |/,,,  ~Y~{{}}}    {{}}} |/,,,  ~Y~{{}}}
+   ~Y~ \|{{}}}/\|/ ~Y~  ,,, ~Y~ \|{{}}}/\|/ ~Y~  ,,,
+   \|/ \|/~Y~  \|,,,|/ {{}}}\|/ \|/~Y~  \|,,,|/ {{}}}
+   \|/ \|/\|/  \{{{}}/  ~Y~ \|/ \|/\|/  \{{{}}/  ~Y~
+   \|/\\|/\|/ \\|~Y~//  \|/ \|/\\|/\|/ \\|~Y~//  \|/
+   \|//\|/\|/,\\|/|/|// \|/ \|//\|/\|/,\\|/|/|// \|/
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        +-++-++-++-++-++-++-++-++-++-++-++-++-+       
         |T||r||e||s||t||l||e||b||r||i||d||g||e|
-        +-++-++-++-++-++-++-++-++-++-++-++-++-+
-                    |F||a||r||m||s|
-                    +-++-++-++-++-+");
+        +-++-++-++-++-++-++-++-++-++-++-++-++-+                             
+                    F||a||r||m||s|
+                    +-++-++-++-++-+         
+            ");
+            Console.WriteLine();
             Console.WriteLine();
         }
 
         static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.White;
-            Console.BackgroundColor = ConsoleColor.DarkMagenta;
+            Console.BackgroundColor = ConsoleColor.DarkRed;
 
             Farm Trestlebridge = new Farm();
 
