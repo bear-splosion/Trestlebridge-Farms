@@ -19,7 +19,7 @@ namespace Trestlebridge.Actions
                 //Grazing field is an array.  + 1 will stop the list from starting at zero.
                 if (farm.NaturalFields[i].rowsOfPlants > farm.NaturalFields[i].plants.Count)
                 {
-                Console.WriteLine($"{i + 1}. Plowed Field : Contains {farm.NaturalFields[i].plants.Count * 6} Plants with {farm.NaturalFields[i].rowsOfPlants - farm.NaturalFields[i].plants.Count} Rows Available");
+                Console.WriteLine($"{i + 1}.Natural Fields : Contains {farm.NaturalFields[i].plants.Count * 6} Plants with {farm.NaturalFields[i].rowsOfPlants - farm.NaturalFields[i].plants.Count} Rows Available");
                 }
             }
 
