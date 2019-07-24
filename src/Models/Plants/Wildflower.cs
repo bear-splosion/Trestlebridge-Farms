@@ -8,9 +8,9 @@ namespace Trestlebridge.Models.Plants
         private int _seedsProduced = 40;
         public string Type { get; } = "Wildflower";
 
-        public int plantsPerRow => throw new NotImplementedException();
+        public int plantsPerRow { get; set; }
 
-        public int rowsOfPlants { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int rowsOfPlants { get; set; }
         public double NaturalRows { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public double NaturalPlants { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 

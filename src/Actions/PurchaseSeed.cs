@@ -26,8 +26,7 @@ namespace Trestlebridge.Actions
                 //Collect input within collect input?
                 case 1:
 
-                    ChoosePlowedField.CollectInput(farm, new Sunflower());
-                    ChooseNaturalField.CollectInput(farm, new Sunflower());
+                    ChooseSunFlowerField.CollectInput(farm, new Sunflower());
                     break;
 
                 case 2:
