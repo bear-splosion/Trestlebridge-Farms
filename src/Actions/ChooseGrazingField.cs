@@ -20,7 +20,7 @@ namespace Trestlebridge.Actions
                 //Grazing field is an array.  + 1 will stop the list from starting at zero.
                 //Will only display fields that are under capacity.
                 if (farm.GrazingFields[i].Capacity > farm.GrazingFields[i].animals.Count) {
-                 Console.WriteLine($"{i + 1}. Grazing Field : Contains {farm.GrazingFields[i].animals.Count} Animals");
+                 Console.WriteLine($"{i + 1}. Grazing Field : Contains {farm.GrazingFields[i].animals.Count} Animals with {farm.GrazingFields[i].Capacity - farm.GrazingFields[i].animals.Count} available Spots");
                 } 
             }
             
@@ -33,7 +33,7 @@ namespace Trestlebridge.Actions
 
             //-1 will set the choice back to the GrazinFields actual array index not the displayed "list" value.4
             
-             farm.GrazingFields[choice - 1].AddResource(animal);
+            farm.GrazingFields[choice - 1].AddResource(animal);
             
             
 

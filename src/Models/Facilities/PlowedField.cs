@@ -8,8 +8,8 @@ namespace Trestlebridge.Models.Facilities
 {
     public class PlowedField : IFacility<IPlowing>
     {
-        private int plantsPerRow = 5;
-        private int rowsOfPlants = 13;
+        public int plantsPerRow = 5;
+        public int rowsOfPlants = 13;
         private Guid _id = Guid.NewGuid();
 
         public List<IPlowing> plants = new List<IPlowing>();
@@ -42,6 +42,7 @@ namespace Trestlebridge.Models.Facilities
             string shortId = $"{this._id.ToString().Substring(this._id.ToString().Length - 6)}";
 
             output.Append($"Plowed field {shortId} has {this.plants.Count} plants out of 65 plants.\n");
+            output.Append($"Plowed field {shortId} has {this.plants.Count} Rows with a total of {this.plants.Count * 5} plants.\n");
             this.plants.ForEach(a => output.Append($"   {a}\n"));
 
             return output.ToString();

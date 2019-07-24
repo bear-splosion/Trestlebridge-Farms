@@ -17,7 +17,9 @@ namespace Trestlebridge.Actions
             for (int i = 0; i < farm.PlowedFields.Count; i++)
             {
                 //Grazing field is an array.  + 1 will stop the list from starting at zero.
-                Console.WriteLine($"{i + 1}. Plowed Field");
+                if (farm.PlowedFields[i].rowsOfPlants > farm.PlowedFields[i].plants.Count){
+                Console.WriteLine($"{i + 1}. Plowed Field : Contains {farm.PlowedFields[i].plants.Count * 5} Plants with {farm.PlowedFields[i].rowsOfPlants - farm.PlowedFields[i].plants.Count} Rows Available");
+                }
             }
 
             // How can I output the type of animal chosen here?
